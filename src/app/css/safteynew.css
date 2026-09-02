@@ -1,0 +1,362 @@
+/* =========================
+   SAFETY PAGE
+========================= */
+
+.safety-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #111;
+}
+
+
+/* =========================
+   SAFETY HERO
+========================= */
+
+.safety-hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("/images/your-safety-image.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.safety-page-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.safety-page-content {
+  position: absolute;
+
+  left: 6vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+
+  color: white;
+}
+
+.safety-content h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+
+/* =========================
+   BOTTOM CARDS
+========================= */
+
+.safety-page-cards {
+  position: absolute;
+
+  right: 48px;
+  bottom: 35px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 15px;
+
+  z-index: 10;
+}
+
+
+/* Individual card */
+
+.safety-page-card {
+  position: relative;
+
+  width: 220px;
+  height: 135px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  display: block;
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Card image */
+
+.safety-page-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  z-index: 0;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* White label */
+
+.safety-page-card-label {
+  position: absolute;
+
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px;
+
+  background: white;
+  color: #111;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  z-index: 2;
+}
+
+
+/* Arrow */
+
+.safety-page-card-label span:last-child {
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.safety-page-card:hover {
+  transform: translateY(-5px);
+
+  border-color: white;
+}
+
+.safety-page-card:hover .safety-page-card-image {
+  transform: scale(1.05);
+}
+
+.safety-page-card:hover
+.safety-page-card-label
+span:last-child {
+  transform: translateX(3px);
+}
+
+
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+.page-transition {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9999;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(0);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .safety-content {
+    left: 5vw;
+  }
+
+  .safety-content h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    letter-spacing: -4px;
+  }
+
+  .safety-page-cards {
+    right: 30px;
+    bottom: 25px;
+
+    gap: 12px;
+  }
+
+  .safety-page-card {
+    width: 180px;
+    height: 115px;
+  }
+
+  .safety-page-card-label {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+
+    height: 30px;
+
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .safety-hero {
+    height: 100vh;
+  }
+
+  .safety-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .safety-content {
+    left: 20px;
+    right: 20px;
+
+    top: 50%;
+  }
+
+  .safety-content h1 {
+    font-size: clamp(50px, 15vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+
+
+  /* Cards */
+
+  .safety-page-cards {
+    left: 20px;
+    right: 20px;
+    bottom: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: auto;
+  }
+
+  .safety-page-card {
+    width: 100%;
+    height: 100px;
+
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .safety-content {
+    left: 15px;
+    right: 15px;
+  }
+
+  .safety-content h1 {
+    font-size: 16vw;
+    line-height: 0.88;
+    letter-spacing: -3px;
+  }
+
+  .safety-page-cards {
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+
+    gap: 8px;
+  }
+
+  .safety-page-card {
+    height: 85px;
+  }
+
+  .safety-page-card-label {
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+
+    height: 25px;
+
+    padding: 0 6px;
+
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .safety-page-card-label span:last-child {
+    font-size: 12px;
+  }
+
+}

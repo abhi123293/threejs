@@ -1,0 +1,133 @@
+.technology-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #111;
+}
+
+.technology-hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("/images/your-technology-image.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.technology-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+.technology-content {
+  position: absolute;
+
+  left: 6vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+
+  color: white;
+}
+
+.technology-content h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+/* =========================
+   TECHNOLOGY PAGE - TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .technology-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .technology-content {
+    left: 5vw;
+  }
+
+  .technology-content h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+}
+
+
+/* =========================
+   TECHNOLOGY PAGE - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .technology-page {
+    min-height: 100vh;
+  }
+
+  .technology-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .technology-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .technology-content {
+    left: 20px;
+    right: 20px;
+    top: 50%;
+  }
+
+  .technology-content h1 {
+    font-size: clamp(50px, 15vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+}
+
+
+/* =========================
+   TECHNOLOGY PAGE - SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .technology-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .technology-overlay {
+    background: rgba(0, 0, 0, 0.42);
+  }
+
+  .technology-content {
+    left: 15px;
+    right: 15px;
+  }
+
+  .technology-content h1 {
+    font-size: 16vw;
+    line-height: 0.88;
+    letter-spacing: -3px;
+  }
+}

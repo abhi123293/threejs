@@ -1,0 +1,344 @@
+.services-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #111;
+}
+
+.services-hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("/images/your-service-image.jpg");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.services-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
+}
+
+.services-content {
+  position: absolute;
+
+  left: 6vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+
+  color: white;
+}
+
+.services-content h1 {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+.hero-cards {
+  position: absolute;
+
+  right: 48px;
+  bottom: 35px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 15px;
+
+  z-index: 5;
+}
+
+.hero-card {
+  position: relative;
+
+  width: 220px;
+  height: 135px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  display: block;
+
+  text-decoration: none;
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.3s ease;
+}
+
+.hero-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.hero-card-label {
+  position: absolute;
+
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px;
+
+  background: #fff;
+  color: #111;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  z-index: 2;
+}
+
+.hero-card-label span:last-child {
+  font-size: 15px;
+}
+.page-transition {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 9999;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(0);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  border-color: #fff;
+}
+
+.hero-card:hover .hero-card-image {
+  transform: scale(1.05);
+}
+
+.hero-card:hover .hero-card-label span:last-child {
+  transform: translateX(3px);
+}
+
+
+
+
+
+
+
+/* =========================
+   SERVICES PAGE - TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .services-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .services-content {
+    left: 5vw;
+  }
+
+  .services-content h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+  .hero-cards {
+    right: 30px;
+    bottom: 25px;
+    gap: 12px;
+  }
+
+  .hero-card {
+    width: 180px;
+    height: 115px;
+  }
+
+  .hero-card-label {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+
+    height: 30px;
+
+    padding: 0 8px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================
+   SERVICES PAGE - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .services-page {
+    min-height: 100vh;
+  }
+
+  .services-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .services-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .services-content {
+    left: 20px;
+    right: 20px;
+    top: 50%;
+  }
+
+  .services-content h1 {
+    font-size: clamp(50px, 15vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+  .hero-cards {
+    left: 20px;
+    right: 20px;
+    bottom: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: auto;
+  }
+
+  .hero-card {
+    width: 100%;
+    height: 100px;
+
+    min-width: 0;
+  }
+
+  .hero-card-label {
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+
+    height: 28px;
+
+    padding: 0 8px;
+
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .hero-card-label span:last-child {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   SERVICES PAGE - SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .services-hero {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .services-overlay {
+    background: rgba(0, 0, 0, 0.42);
+  }
+
+  .services-content {
+    left: 15px;
+    right: 15px;
+  }
+
+  .services-content h1 {
+    font-size: 16vw;
+    line-height: 0.88;
+    letter-spacing: -3px;
+  }
+  .hero-cards {
+    left: 15px;
+    right: 15px;
+    bottom: 20px;
+
+    gap: 8px;
+  }
+
+  .hero-card {
+    height: 85px;
+  }
+
+  .hero-card-label {
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+
+    height: 25px;
+
+    padding: 0 6px;
+
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-card-label span:last-child {
+    font-size: 12px;
+  }
+}

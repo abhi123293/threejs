@@ -1,0 +1,284 @@
+/* =========================
+   OUR PARTNERS
+========================= */
+
+.our-partners {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 60px 40px;
+
+  background: #050505;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   TOP LIGHT EFFECT
+========================= */
+
+.our-partners::before {
+  content: "";
+
+  position: absolute;
+
+  top: -250px;
+  left: 50%;
+
+  width: 900px;
+  height: 500px;
+
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 30%,
+    rgba(255, 255, 255, 0.02) 55%,
+    transparent 75%
+  );
+
+  filter: blur(20px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.partners-label {
+  position: relative;
+
+  margin-bottom: 35px;
+
+  z-index: 2;
+}
+
+.partners-label strong {
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  background: white;
+  color: #111;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.partners-intro {
+  position: relative;
+
+  width: 100%;
+
+  z-index: 2;
+}
+
+.partners-intro h1 {
+  margin: 0;
+
+  max-width: 1250px;
+
+  font-size: clamp(45px, 5.2vw, 82px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  font-weight: 600;
+
+  color: white;
+}
+
+
+/* =========================
+   PARTNERS AREA
+========================= */
+
+.partners-list {
+  position: relative;
+
+  width: 100%;
+  height: 600px;
+
+  margin-top: 100px;
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+
+  z-index: 2;
+  perspective: 1000px;
+perspective-origin: center center;
+}
+
+
+/* =========================
+   3D CONTAINER
+========================= */
+
+.partners-three {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   PARTNER NAME
+========================= */
+
+.partner-3d-name {
+  width: 700px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-align: left;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  white-space: nowrap;
+
+  transform-origin: center center;
+}
+
+
+/* =========================
+   OUR PARTNERS - TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .our-partners {
+    padding: 50px 30px;
+  }
+
+  .partners-label {
+    margin-bottom: 30px;
+  }
+
+  .partners-intro h1 {
+    max-width: 900px;
+    font-size: clamp(40px, 6vw, 65px);
+    letter-spacing: -2.5px;
+  }
+
+  .partners-list {
+    height: 520px;
+    margin-top: 80px;
+  }
+
+  .partner-3d-name {
+    width: 600px;
+    padding: 20px 0;
+    font-size: 36px;
+  }
+}
+
+
+/* =========================
+   OUR PARTNERS - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .our-partners {
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .partners-label {
+    margin-bottom: 25px;
+  }
+
+  .partners-label strong {
+    padding: 4px 7px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .partners-intro h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 9vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+
+  .partners-list {
+    height: 450px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .partner-3d-name {
+    width: 500px;
+    padding: 18px 0;
+    font-size: 30px;
+  }
+}
+
+
+/* =========================
+   OUR PARTNERS - SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .our-partners {
+    padding: 35px 15px;
+  }
+
+  .partners-label {
+    margin-bottom: 20px;
+  }
+
+  .partners-label strong {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .partners-intro h1 {
+    font-size: 10vw;
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+
+  .partners-list {
+    height: 400px;
+    margin-top: 45px;
+  }
+
+  .partner-3d-name {
+    width: 420px;
+    padding: 16px 0;
+    font-size: 26px;
+  }
+}

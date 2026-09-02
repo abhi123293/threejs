@@ -1,0 +1,347 @@
+/* =========================
+   MINERALS SECTION
+========================= */
+
+.minerals {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.minerals-header {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  z-index: 10;
+}
+
+
+
+.minerals-label {
+  display: block;
+  width: max-content;
+  margin-top: 10px;
+
+  padding: 3px 7px;
+  border-radius: 4px;
+
+  background: #111;
+  color: #fff;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.minerals-content {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+
+  align-items: center;
+  justify-items: center;
+}
+/* =========================
+   LEFT MINERAL LIST
+========================= */
+
+.minerals-list {
+  padding-left: 45px;
+}
+
+.minerals-list span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.minerals-list h2 {
+  margin: 0;
+
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 0.9;
+  letter-spacing: -3px;
+
+  color: #ddd;
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.minerals-list h2.active {
+  color: #090909;
+  transform: translatex(8px);
+}
+
+
+ .mineral-center {
+  position: relative;
+
+  width: min(42vw, 700px);
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  justify-self: center;
+}
+
+.mineral-ring {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mineral-three-ring {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.mineral-ring img {
+  position: relative;
+
+  z-index: 2;
+
+  width: 45%;
+  height: 45%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+
+/* =========================
+   RIGHT SYMBOL
+========================= */
+
+.mineral-info {
+  padding-right: 45px;
+
+  text-align: right;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+/* =========================
+   MINERALS - TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .minerals-header {
+    top: 30px;
+    left: 30px;
+  }
+
+  .minerals-content {
+    grid-template-columns: 22% 56% 22%;
+  }
+
+  .minerals-list {
+    padding-left: 30px;
+  }
+
+  .minerals-list span {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .minerals-list h2 {
+    font-size: clamp(38px, 5vw, 60px);
+  }
+
+  .mineral-center {
+    width: min(48vw, 600px);
+  }
+
+  .mineral-info {
+    padding-right: 30px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   MINERALS - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .minerals {
+    min-height: 100vh;
+  }
+
+  .minerals-header {
+    top: 25px;
+    left: 20px;
+  }
+
+  .minerals-label {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+
+  /* MAIN CONTENT */
+
+  .minerals-content {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 20px 40px;
+  }
+
+
+  /* MINERAL CENTER */
+
+  .mineral-center {
+    width: min(75vw, 450px);
+    aspect-ratio: 1 / 1;
+
+    flex-shrink: 0;
+  }
+
+  .mineral-ring {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mineral-ring img {
+    width: 45%;
+    height: 45%;
+  }
+
+
+  /* LEFT LIST */
+
+  .minerals-list {
+    position: absolute;
+
+    left: 20px;
+    bottom: 35px;
+
+    padding-left: 0;
+
+    z-index: 5;
+  }
+
+  .minerals-list span {
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .minerals-list h2 {
+    font-size: 32px;
+    line-height: 0.9;
+    letter-spacing: -2px;
+  }
+
+
+  /* RIGHT INFO */
+
+  .mineral-info {
+    position: absolute;
+
+    right: 20px;
+    top: 110px;
+
+    padding-right: 0;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    text-align: right;
+  }
+}
+
+
+/* =========================
+   MINERALS - SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .minerals-header {
+    top: 20px;
+    left: 15px;
+  }
+
+  .minerals-content {
+    padding: 90px 15px 30px;
+  }
+
+  .mineral-center {
+    width: 82vw;
+  }
+
+  .mineral-ring img {
+    width: 42%;
+    height: 42%;
+  }
+
+  .minerals-list {
+    left: 15px;
+    bottom: 25px;
+  }
+
+  .minerals-list span {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .minerals-list h2 {
+    font-size: 28px;
+    letter-spacing: -1.5px;
+  }
+
+  .mineral-info {
+    right: 15px;
+    top: 95px;
+    font-size: 10px;
+  }
+}

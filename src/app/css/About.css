@@ -1,0 +1,140 @@
+.about {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 120px 50px;
+
+  background: #e8e5df;
+  color: #f4ecec;
+}
+
+.about h2 {
+  margin: 0;
+
+  font-size: clamp(
+    60px,
+    10vw,
+    150px
+  );
+
+  line-height: 0.85;
+
+  letter-spacing: -6px;
+}
+
+.about-text {
+  max-width: 500px;
+
+  margin-top: 80px;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+}
+
+
+.about-label {
+  margin: 0 0 80px;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+
+
+/* =========================================
+   ABOUT - TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .about {
+    min-height: 100vh;
+    padding: 100px 30px;
+  }
+
+  .about h2 {
+    font-size: clamp(55px, 10vw, 110px);
+    letter-spacing: -5px;
+  }
+
+  .about-label {
+    margin-bottom: 60px;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .about-text {
+    max-width: 450px;
+    margin-top: 60px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================
+   ABOUT - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .about {
+    min-height: 100vh;
+    padding: 80px 20px;
+  }
+
+  .about h2 {
+    font-size: clamp(50px, 13vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+  }
+
+  .about-label {
+    margin-bottom: 45px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    margin-top: 50px;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+}
+
+
+/* =========================================
+   ABOUT - SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .about {
+    padding: 65px 15px;
+  }
+
+  .about h2 {
+    font-size: 14vw;
+    line-height: 0.9;
+    letter-spacing: -3px;
+  }
+
+  .about-label {
+    margin-bottom: 35px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
