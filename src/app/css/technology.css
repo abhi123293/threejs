@@ -1,185 +1,243 @@
 /* =========================
-   TECHNOLOGY PAGE
+   TECHNOLOGY
 ========================= */
 
-.technology-page {
+.technology {
   width: 100%;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: #111;
-}
 
-.technology-hero {
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-
-  background-image: url("/images/your-technology-image.jpg");
-  background-size: cover;
-  background-position: center;
+  background: #eef2f0;
+  color: #111;
 
   overflow: hidden;
-}
-
-.technology-page-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.35);
-
-  z-index: 1;
-}
-
-.technology-page-content {
-  position: absolute;
-
-  left: 6vw;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  z-index: 2;
-
-  color: white;
-}
-
-.technology-page-content h1 {
-  margin: 0;
-
-  font-size: clamp(60px, 8vw, 140px);
-  line-height: 0.9;
-  letter-spacing: -5px;
 }
 
 
 /* =========================
-   CARDS
+   INTRO
 ========================= */
 
-.technology-page-cards {
-  position: absolute;
+.technology-intro {
+  padding: 70px 45px 0;
+}
 
-  right: 48px;
-  bottom: 35px;
+
+.technology-label {
+  display: flex;
+  flex-direction: column;
+
+  width: max-content;
+
+  gap: 2px;
+}
+
+
+.technology-label span {
+  width: max-content;
+
+  padding: 2px 5px;
+
+  border: 1px solid #111;
+  border-radius: 3px;
+
+  font-size: 12px;
+  line-height: 1;
+}
+
+
+.technology-label span:last-child {
+  background: #111;
+  color: #fff;
+
+  border: none;
+}
+
+
+.technology-intro h1 {
+  max-width: 1200px;
+
+  margin: -30px 0 0 115px;
+
+  font-size: clamp(45px, 5vw, 80px);
+
+  line-height: 0.95;
+  letter-spacing: -4px;
+
+  font-weight: 600;
+}
+.technology-char {
+  display: inline-block;
+  opacity: 0;
+}
+
+
+/* =========================
+   BIG NUMBER
+========================= */
+
+.technology-number {
+  min-height: 600px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
 
-  z-index: 10;
+  text-align: center;
 }
 
-.technology-page-card {
+
+.technology-number h2 {
+  margin: 0;
+
+  font-size: clamp(100px, 18vw, 250px);
+
+  line-height: 0.8;
+
+  letter-spacing: -10px;
+
+  font-weight: 600;
+}
+
+
+.technology-number > span {
+  margin-top: 60px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   MACHINE GRID
+========================= */
+
+.machine-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 0 12px 80px;
+}
+.services-title {
+  margin: 0;
+
+  font-size: clamp(100px, 18vw, 250px);
+
+  line-height: 0.8;
+
+  letter-spacing: -10px;
+
+  font-weight: 600;
+}
+
+.machines-char {
+  display: inline-block;
+
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+
+  opacity: 0;
+}
+
+/* =========================
+   MACHINE CARD
+========================= */
+
+.machine-card {
+  min-width: 0;
+}
+
+
+.machine-image {
   position: relative;
 
-  width: 220px;
-  height: 135px;
+  width: 100%;
+  height: 550px;
+
+  background: #111;
+
+  border-radius: 10px;
 
   overflow: hidden;
-
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  transform-origin: center center;
-
-  transition:
-    transform 0.4s ease,
-    border-color 0.3s ease;
-}
-
-.technology-page-card-image {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  z-index: 0;
-
-  transition: transform 0.5s ease;
-}
-
-.technology-page-card-label {
-  position: absolute;
-
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-
-  height: 32px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  padding: 0 10px;
-
-  background: white;
-  color: #111;
-
-  font-size: 11px;
-  font-weight: 600;
-
-  letter-spacing: 1px;
-
-  z-index: 2;
-}
-
-.technology-page-card-label span:last-child {
-  font-size: 15px;
-
-  transition: transform 0.3s ease;
-}
-
-.technology-page-card:hover {
-  transform: translateY(-5px);
-  border-color: white;
-}
-
-.technology-page-card:hover .technology-page-card-image {
-  transform: scale(1.05);
-}
-
-.technology-page-card:hover
-.technology-page-card-label
-span:last-child {
-  transform: translateX(3px);
+  justify-content: center;
 }
 
 
-/* =========================
-   TRANSITION
-========================= */
+.machine-image img {
+  width: 85%;
+  height: 85%;
 
-.technology-page-transition {
-  position: fixed;
+  object-fit: contain;
 
-  left: 0;
-  top: 0;
+  display: block;
 
-  width: 100vw;
-  height: 100vh;
+  transition: filter 0.5s ease,
+              transform 0.5s ease;
+}
+.machine-description {
+  position: absolute;
 
-  z-index: 9999;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #fff;
 
-  transform: scale(0);
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 500;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 
   pointer-events: none;
+}
+.machine-card h3 {
+  margin: 18px 0 0;
+
+  font-size: 24px;
+
+  font-weight: 500;
+}
+.machine-card:not(.dimmed) .machine-description {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+.machine-card {
+  transition: opacity 0.5s ease;
+}
+
+.machine-card.dimmed {
+  opacity: 0.25;
+}
+.machine-card:not(.dimmed) .machine-image img {
+  transform: scale(1.03);
+}
+
+.machine-card p {
+  max-width: 450px;
+
+  margin-top: 15px;
+
+  font-size: 17px;
+
+  line-height: 1.15;
+
+  color: #777;
 }
 
 
@@ -189,26 +247,65 @@ span:last-child {
 
 @media (max-width: 1024px) {
 
-  .technology-page-content {
-    left: 5vw;
+  .technology-intro {
+    padding: 60px 30px 0;
   }
 
-  .technology-page-content h1 {
-    font-size: clamp(55px, 9vw, 110px);
-    letter-spacing: -4px;
+  .technology-intro h1 {
+    max-width: 900px;
+    margin: -20px 0 0 60px;
+
+    font-size: clamp(42px, 6vw, 65px);
+
+    line-height: 0.95;
+    letter-spacing: -3px;
   }
 
-  .technology-page-cards {
+  .technology-number {
+    min-height: 520px;
+  }
+
+  .technology-number h2 {
+    font-size: clamp(90px, 18vw, 190px);
+    letter-spacing: -8px;
+  }
+
+  .technology-number > span {
+    margin-top: 45px;
+    font-size: 12px;
+  }
+
+  .machine-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    padding: 0 20px 60px;
+  }
+
+  .machine-image {
+    height: 450px;
+  }
+
+  .machine-image img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .machine-description {
+    left: 30px;
     right: 30px;
-    bottom: 25px;
-    gap: 12px;
+    bottom: 30px;
+
+    font-size: 16px;
   }
 
-  .technology-page-card {
-    width: 180px;
-    height: 115px;
+  .machine-card h3 {
+    font-size: 22px;
   }
 
+  .machine-card p {
+    font-size: 16px;
+  }
 }
 
 
@@ -218,35 +315,71 @@ span:last-child {
 
 @media (max-width: 768px) {
 
-  .technology-page-content {
-    left: 20px;
-    right: 20px;
+  .technology-intro {
+    padding: 40px 20px 0;
   }
 
-  .technology-page-content h1 {
-    font-size: clamp(50px, 15vw, 90px);
-    letter-spacing: -4px;
+  .technology-intro h1 {
+    max-width: 100%;
+
+    margin: 40px 0 0;
+
+    font-size: clamp(38px, 10vw, 55px);
+
+    line-height: 0.95;
+    letter-spacing: -2.5px;
   }
 
-  .technology-page-cards {
-    left: 20px;
-    right: 20px;
+  .technology-number {
+    min-height: 450px;
+  }
+
+  .technology-number h2 {
+    font-size: clamp(90px, 25vw, 150px);
+    letter-spacing: -5px;
+  }
+
+  .technology-number > span {
+    margin-top: 40px;
+    font-size: 11px;
+  }
+
+  .machine-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 0 20px 50px;
+  }
+
+  .machine-image {
+    height: 450px;
+    border-radius: 8px;
+  }
+
+  .machine-image img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .machine-description {
+    left: 25px;
+    right: 25px;
     bottom: 25px;
 
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 10px;
-
-    width: auto;
+    font-size: 16px;
+    line-height: 1.2;
   }
 
-  .technology-page-card {
-    width: 100%;
-    height: 100px;
-    min-width: 0;
+  .machine-card h3 {
+    margin-top: 15px;
+    font-size: 22px;
   }
 
+  .machine-card p {
+    margin-top: 12px;
+    font-size: 15px;
+  }
 }
 
 
@@ -256,43 +389,70 @@ span:last-child {
 
 @media (max-width: 480px) {
 
-  .technology-page-content {
-    left: 15px;
-    right: 15px;
+  .technology-intro {
+    padding: 35px 15px 0;
   }
 
-  .technology-page-content h1 {
-    font-size: 16vw;
-    line-height: 0.88;
-    letter-spacing: -3px;
+  .technology-intro h1 {
+    margin: 35px 0 0;
+
+    font-size: 10.5vw;
+
+    line-height: 0.98;
+    letter-spacing: -2px;
   }
 
-  .technology-page-cards {
-    left: 15px;
-    right: 15px;
+  .technology-label span {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .technology-number {
+    min-height: 380px;
+  }
+
+  .technology-number h2 {
+    font-size: 25vw;
+    letter-spacing: -4px;
+  }
+
+  .technology-number > span {
+    margin-top: 30px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .machine-grid {
+    gap: 12px;
+    padding: 0 15px 40px;
+  }
+
+  .machine-image {
+    height: 360px;
+    border-radius: 8px;
+  }
+
+  .machine-image img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .machine-description {
+    left: 20px;
+    right: 20px;
     bottom: 20px;
-    gap: 8px;
+
+    font-size: 14px;
+    line-height: 1.2;
   }
 
-  .technology-page-card {
-    height: 85px;
+  .machine-card h3 {
+    margin-top: 13px;
+    font-size: 20px;
   }
 
-  .technology-page-card-label {
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-
-    height: 25px;
-
-    padding: 0 6px;
-
-    font-size: 8px;
-    letter-spacing: 0.5px;
+  .machine-card p {
+    margin-top: 10px;
+    font-size: 14px;
   }
-
-  .technology-page-card-label span:last-child {
-    font-size: 12px;
-  }
-
 }
