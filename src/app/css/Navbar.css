@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100px;
 
@@ -27,7 +26,6 @@
   display: flex;
   align-items: center;
   gap: 45px;
-
   font-size: 15px;
 }
 
@@ -35,7 +33,9 @@
   color: rgb(160, 213, 237);
   text-decoration: none;
 
-  transition: color 0.3s ease, opacity 0.3s ease;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -49,6 +49,7 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
 
   background: transparent;
+
   color: rgb(145, 173, 230);
 
   font-size: 14px;
@@ -64,38 +65,79 @@
   background: white;
   color: #111;
 }
-
-
 /* =========================
-   NAVBAR - TABLET
+   MOBILE MENU
 ========================= */
 
-@media (max-width: 1024px) {
+.mobile-menu {
+  position: fixed;
 
-  .navbar {
-    height: 80px;
-    padding: 0 30px;
-  }
+  top: 0;
+  left: 0;
 
-  .logo {
-    font-size: 24px;
-    letter-spacing: -1px;
-  }
+  width: 100%;
+  height: 100vh;
 
-  .nav-links {
-    gap: 25px;
-    font-size: 14px;
-  }
+  background: #111;
 
-  .menu-btn {
-    padding: 11px 22px;
-    font-size: 13px;
-  }
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-20px);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.mobile-menu-open {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+.mobile-menu a {
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.mobile-menu a:hover {
+
+  opacity: 0.5;
+
+  transform: translateX(10px);
 }
 
 
 /* =========================
-   NAVBAR - MOBILE
+   TABLET
 ========================= */
 
 @media (max-width: 768px) {
@@ -103,6 +145,7 @@
   .navbar {
     height: 70px;
     padding: 0 20px;
+    z-index: 1000;
   }
 
   .logo {
@@ -111,19 +154,31 @@
   }
 
   .nav-links {
-    display: none;
+    display: none !important;
   }
 
   .menu-btn {
+    display: block !important;
+
     padding: 10px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    background: transparent;
+
+    color: rgb(145, 173, 230);
+
     font-size: 12px;
+
+    cursor: pointer;
+  }
+
+
+  .mobile-menu a {
+    font-size: 40px;
   }
 }
 
-
-/* =========================
-   NAVBAR - SMALL MOBILE
-========================= */
 
 @media (max-width: 480px) {
 
@@ -139,5 +194,43 @@
   .menu-btn {
     padding: 9px 15px;
     font-size: 11px;
+  }
+
+
+  .mobile-menu {
+    gap: 24px;
+  }
+
+
+  .mobile-menu a {
+    font-size: 32px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 65px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-btn {
+    padding: 9px 15px;
+    font-size: 11px;
+  }
+
+
+  .mobile-menu {
+    gap: 24px;
+  }
+
+
+  .mobile-menu a {
+    font-size: 32px;
   }
 }
