@@ -65,8 +65,8 @@
 .about-new-contact-wrapper {
   position: absolute;
 
-  right: 8vw;
-  top: 45%;
+  right: 4vw;
+  top: 35%;
 
   width: 420px;
 
@@ -268,4 +268,280 @@
   z-index: 2;
 
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+
+  .about-new {
+    min-height: 110vh;
+    padding: 110px 30px;
+  }
+
+  .about-new-title h2 {
+    font-size: clamp(55px, 8vw, 90px);
+    letter-spacing: -4px;
+  }
+
+  .about-new-description {
+    max-width: 400px;
+    margin-top: 70px;
+    margin-left: 5vw;
+  }
+
+  .about-new-description p {
+    font-size: 16px;
+  }
+
+  .about-new-contact-wrapper {
+    right: 4vw;
+    top: 38%;
+    width: 360px;
+  }
+
+  .about-new-contact-card {
+    min-height: 500px;
+    padding: 25px;
+  }
+
+  .contact-card-title {
+    margin-top: 80px;
+  }
+
+  .contact-card-title h3 {
+    font-size: 45px;
+  }
+
+  .contact-card-details {
+    margin-top: 70px;
+  }
+
+  .mining-crystal {
+    left: 42%;
+    top: 34%;
+
+    width: 360px;
+    height: 360px;
+  }
+
+  .about-new-bg-text {
+    font-size: 24vw;
+  }
+}
+@media (max-width: 768px) {
+
+  .about-new {
+    min-height: auto;
+    padding: 90px 20px 100px;
+  }
+
+  .about-new-label {
+    font-size: 10px;
+    padding: 4px 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-new-title {
+    margin-top: 35px;
+  }
+
+  .about-new-title h2 {
+    max-width: 100%;
+
+    font-size: clamp(48px, 13vw, 80px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+  }
+
+  .about-new-description {
+    max-width: 100%;
+
+    margin-top: 55px;
+    margin-left: 0;
+  }
+
+  .about-new-description p {
+    font-size: 15px;
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* CRYSTAL */
+
+  .mining-crystal {
+    position: relative;
+
+    left: auto;
+    top: auto;
+
+    width: 100%;
+    height: 350px;
+
+    margin-top: 20px;
+
+    z-index: 2;
+  }
+
+
+  /* CONTACT CARD */
+
+  .about-new-contact-wrapper {
+    position: relative;
+
+    right: auto;
+    top: auto;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    perspective: 1000px;
+  }
+
+  .about-new-contact-card {
+    width: 100%;
+
+    min-height: 500px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+  }
+
+  .contact-card-title {
+    margin-top: 80px;
+  }
+
+  .contact-card-title h3 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .contact-card-details {
+    margin-top: 65px;
+  }
+
+  .contact-item {
+    padding: 13px 0;
+  }
+
+  .contact-item span {
+    font-size: 8px;
+  }
+
+  .contact-item p {
+    font-size: 11px;
+  }
+
+  .contact-card-bottom {
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+  }
+
+
+  /* BACKGROUND TEXT */
+
+  .about-new-bg-text {
+    left: -5vw;
+    bottom: 20px;
+
+    font-size: 30vw;
+
+    letter-spacing: -2vw;
+  }
+}
+@media (max-width: 480px) {
+
+  .about-new {
+    padding: 70px 15px 80px;
+  }
+
+  .about-new-title {
+    margin-top: 30px;
+  }
+
+  .about-new-title h2 {
+    font-size: 13vw;
+    line-height: 0.92;
+    letter-spacing: -3px;
+  }
+
+  .about-new-description {
+    margin-top: 45px;
+  }
+
+  .about-new-description p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* CRYSTAL */
+
+  .mining-crystal {
+    height: 300px;
+
+    margin-top: 10px;
+  }
+
+
+  /* CONTACT */
+
+  .about-new-contact-wrapper {
+    margin-top: 10px;
+  }
+
+  .about-new-contact-card {
+    min-height: 450px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+
+  .contact-card-top {
+    font-size: 9px;
+  }
+
+  .contact-card-title {
+    margin-top: 65px;
+  }
+
+  .contact-card-title h3 {
+    font-size: 36px;
+    letter-spacing: -2px;
+  }
+
+  .contact-card-details {
+    margin-top: 55px;
+  }
+
+  .contact-item {
+    padding: 11px 0;
+  }
+
+  .contact-item p {
+    font-size: 10px;
+  }
+
+  .contact-card-bottom {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    padding: 11px 12px;
+  }
+
+  .contact-arrow {
+    font-size: 16px;
+  }
+
+
+  .about-new-bg-text {
+    font-size: 32vw;
+  }
 }
