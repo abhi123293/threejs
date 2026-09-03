@@ -7,6 +7,7 @@ import SafetyPolicy from "@/components/SafetyPolicy";
 import Technology from "@/components/Technology";
 import OurServices from "@/components/OurServices";
 import OurPartners from "@/components/OurPartners";
+import AboutNew from "@/components/AboutNew";
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
      <Technology />
      <OurServices/>
      <OurPartners/>
+     <AboutNew/>
 
     </main>
   );
